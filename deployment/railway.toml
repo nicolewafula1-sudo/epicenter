@@ -1,0 +1,26 @@
+# Epicenter - Backend Railway Deployment Configuration
+
+name: epicenter-backend
+runtime: node
+
+env:
+  - name: NODE_ENV
+    value: production
+  - name: JWT_SECRET
+    value: ${JWT_SECRET}
+  - name: DB_HOST
+    value: ${DATABASE_HOST}
+  - name: DB_PORT
+    value: 5432
+  - name: DB_NAME
+    value: ${DATABASE_NAME}
+  - name: DB_USER
+    value: ${DATABASE_USER}
+  - name: DB_PASSWORD
+    value: ${DATABASE_PASSWORD}
+  - name: DB_SSL
+    value: 'true'
+  - name: CORS_ORIGIN
+    value: https://epicenter-frontend.vercel.app
+  - name: LOG_LEVEL
+    value: info
